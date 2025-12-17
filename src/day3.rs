@@ -2,7 +2,7 @@
 
 
 pub fn part2(){
-    let filename = "/home/tony/Rust/aoc/input/day3.txt";
+    let filename = "input/day3.txt";
     let input_lines = std::fs::read_to_string(filename).expect("Lmao");
     let lines = input_lines.split("\n").filter(|line: &&str| (*line) != "");
 

@@ -6,17 +6,18 @@ mod day3;
 mod day4;
 mod day5;
 mod day6;
-
+mod day7;
 
 fn main() {
     // Time the execution of each part
     let start = std::time::Instant::now();
-    day1::part2();
-    day2::part2();
-    day3::part2();
-    day4::part2();
-    day5::part2();
-    day6::part2();
+    // day1::part2();
+    // day2::part2();
+    // day3::part2();
+    // day4::part2();
+    // day5::part2();
+    // day6::part2();
+    day7::part2();
     let duration = start.elapsed();
     println!("Total execution time: {:?}", duration);
 }

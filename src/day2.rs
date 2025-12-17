@@ -35,7 +35,7 @@ fn check_range(start : i64, end: i64)-> i64{
 
 
 pub fn part2 (){
-    let filename =  "/home/tony/Rust/aoc/input/day2.txt";
+    let filename =  "input/day2.txt";
     let line = std::fs::read_to_string(filename).expect("lmao");
     let sections : Vec<&str>= line.split(",").collect();
     let mut total = 0;

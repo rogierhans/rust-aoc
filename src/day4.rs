@@ -11,7 +11,7 @@ pub fn count_true(array: &Vec<bool>) -> usize {
 }
 
 pub fn part2(){
-    let filename = "/home/tony/Rust/aoc/input/day4.txt";
+    let filename = "input/day4.txt";
     let input_line = std::fs::read_to_string(filename).expect("Lmao");
     let lines= input_line.split("\n").collect::<Vec<&str>>();
     let length = lines.len();
