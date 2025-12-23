@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 
 
 struct Point{
@@ -14,10 +16,11 @@ impl Point {
 }
 
 
-struct PointPair{
-    first : Point,
-    second : Point, 
+struct PointPair<'a>{
+    p1 : &'a Point,
+    p2 : &'a Point,
 }
+
 
 pub fn part2(){
     let input = std::fs::read_to_string("input/day8.txt").expect("");
@@ -33,18 +36,8 @@ pub fn part2(){
         };
         points.push(point);
     }
-    let all_point_pairs = points.iter().flat_map(|p1| {
-        points.iter().map(|p2| PointPair{
-            first: Point{
-                x: p1.x,
-                y: p1.y,
-                z: p1.z,
-            },
-            second: Point{
-                x: p2.x,
-                y: p2.y,
-                z: p2.z,
-            },
-        })
+    let all_pairs = points.iter().flat_map(|p1| {
+        points.iter().map(|p2| PointPair { p1, p2 })
     });
-}
+
+    }

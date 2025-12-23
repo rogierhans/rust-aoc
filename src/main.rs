@@ -1,12 +1,13 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
-mod day1;
-mod day2;
-mod day3;
-mod day4;
-mod day5;
-mod day6;
-mod day7;
+// mod day1;
+// mod day2;
+// mod day3;
+// mod day4;
+// mod day5;
+// mod day6;
+// mod day7;
+mod day8;
 
 fn main() {
     // Time the execution of each part
@@ -17,7 +18,7 @@ fn main() {
     // day4::part2();
     // day5::part2();
     // day6::part2();
-    day7::part2();
+    day8::part2();
     let duration = start.elapsed();
     println!("Total execution time: {:?}", duration);
 }
